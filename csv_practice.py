@@ -1,11 +1,11 @@
 '''
 1. Excel provides a visual spreadsheet interface that is fast for manual inspection and 
 quick manual edits. Python automates repetitive data transformations without manual clicks, 
-handles datasets larger than Excel's row limit, and ensures reproductible results through version-controlled code. 
+handles datasets larger than Excel's row limit, and ensures reproducible results through version-controlled code. 
 
 2. An e-commerce order processing or payment system benefits from an append-mode log file. 
 Each completed transaction appends a timestamped record to the end of the file without overwriting 
-prior entries, creating a reliable audit trail for financial reconcilliation and debugging. 
+prior entries, creating a reliable audit trail for financial reconciliation and debugging. 
 '''
 
 import csv
@@ -93,7 +93,9 @@ with open (SALES_FILE, 'r') as f:
         print(f'{row['product']}: {quantity} units x ${price:.2f} = ${total:.2f}')
 
 print(f'Total Revenue: ${dict_total:.2f}')
-
+# prefer csv.reader for simple positional files without headers or when memory is critical
+# prefer csv.DictReader when working with named columns, as acessing row['product'] is clearer 
+# and safer if column order changes 
 
 print('--- Exercise 7 ---')
 summary = {}
