@@ -1,3 +1,13 @@
+'''
+1. Excel provides a visual spreadsheet interface that is fast for manual inspection and 
+quick manual edits. Python automates repetitive data transformations without manual clicks, 
+handles datasets larger than Excel's row limit, and ensures reproductible results through version-controlled code. 
+
+2. An e-commerce order processing or payment system benefits from an append-mode log file. 
+Each completed transaction appends a timestamped record to the end of the file without overwriting 
+prior entries, creating a reliable audit trail for financial reconcilliation and debugging. 
+'''
+
 import csv
 from datetime import datetime
 
